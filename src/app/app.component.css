@@ -2,6 +2,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Beginning of grid definition */
@@ -9,6 +10,7 @@ body {
 .wrapper {
   height: 100%;
   display: grid;
+  grid-gap: 1%;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-template-areas:
@@ -62,6 +64,7 @@ footer {
   z-index: -1;
 }
 
+/* Dark box with main content */
 #container {
   grid-column: 1/12;
   grid-row: 1/12;
@@ -71,4 +74,28 @@ footer {
   color: white;
   font-weight: bold;
   text-align: left;
+}
+
+/* Navigation bar */
+
+.nav-bar ul li a {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 10%;
+  padding: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.nav-bar ul li a:hover {
+  background-color: rgba(82, 82, 82, 0.7);
+}
+
+.nav-bar ul li a:active {
+  background-color: rgba(82, 82, 82, 0.3);
+}
+
+@media screen and (max-width: 768px) {
 }
