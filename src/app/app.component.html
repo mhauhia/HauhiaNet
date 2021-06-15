@@ -1,7 +1,8 @@
 <body>
   <!-- Routed views go here -->
   <div class="wrapper">
-    <div id="background-image"></div>
+    <div class="background-image-4"></div>
+
     <header></header>
 
     <section class="sidebar-left"></section>
@@ -12,16 +13,35 @@
     <nav class="nav-bar">
       <ul id="nav-bar-ul">
         <li>
-          <a id="home" routerLink="/home" routerLinkActive="active">Home</a>
+          <a
+            id="home"
+            routerLink="/home"
+            routerLinkActive="active"
+            (click)="viewSection()"
+            >Home</a
+          >
         </li>
-        <li><a id="cv" routerLink="/cv" routerLinkActive="active">CV</a></li>
         <li>
-          <a id="contact" routerLink="/contact" routerLinkActive="active"
+          <a
+            id="cv"
+            routerLink="/cv"
+            routerLinkActive="active"
+            (click)="viewSection()"
+            >CV</a
+          >
+        </li>
+        <li>
+          <a
+            id="contact"
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="viewSection()"
             >Contact</a
           >
         </li>
       </ul>
     </nav>
-    <main><router-outlet></router-outlet></main>
+    <!-- Refers to viewSection -method in ts-file -->
+    <main *ngIf="isTruthy"><router-outlet></router-outlet></main>
   </div>
 </body>

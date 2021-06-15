@@ -56,7 +56,37 @@ footer {
 
 /* End of grid definition */
 
-#background-image {
+/* Start of background images */
+
+.background-image-1 {
+  grid-column: 1/13;
+  grid-row: 1/13;
+  background-image: url("../assets/background_1.jpg");
+  height: 100vh;
+  overflow: clip; /* Was "clip" */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(6px);
+  -webkit-filter: blur(6px); */
+  z-index: -1;
+}
+
+.background-image-3 {
+  grid-column: 1/13;
+  grid-row: 1/13;
+  background-image: url("../assets/background_3.jpg");
+  height: 100vh;
+  overflow: clip; /* Was "clip" */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(6px);
+  -webkit-filter: blur(6px); */
+  z-index: -1;
+}
+
+.background-image-4 {
   grid-column: 1/13;
   grid-row: 1/13;
   background-image: url("../assets/background_4.jpg");
