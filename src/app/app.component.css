@@ -56,14 +56,14 @@ footer {
 #background-image {
   grid-column: 1/13;
   grid-row: 1/13;
-  background-image: url("../assets/background_3.jpg");
+  background-image: url("../assets/background_4.jpg");
   height: 100vh;
   overflow: clip; /* Was "clip" */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
+  /* filter: blur(6px);
+  -webkit-filter: blur(6px); */
   z-index: -1;
 }
 
@@ -173,5 +173,6 @@ footer {
 
   main {
     grid-column: 1/13;
+    margin: 2%;
   }
 }
