@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CVComponent } from './cv/cv.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CVComponent, ContactComponent],
+  // With the routingComponents declaration it's only necessary to add routes to routing module.
+  declarations: [AppComponent, routingComponents],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,158 +1,53 @@
-body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Beginning of grid definition */
-
-.wrapper {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-areas:
-    "header header header header header header header header header header header header"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "sidebar-left main main main main main main main main main main sidebar-right"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
-}
-
-section:nth-of-type(1) {
-  grid-area: sidebar-left;
-}
-
-section:nth-of-type(2) {
-  grid-area: sidebar-right;
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.wrapper > * {
-  display: grid;
-}
-
-/* End of grid definition */
-
-#background-image {
-  grid-column: 1/13;
-  grid-row: 1/13;
-  background-image: url("/src/assets/background_1.jpg");
-  height: 100vh;
-  overflow: clip; /* Was "clip" */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
-  z-index: -1;
-}
-
 /* Dark box with main content */
 #container {
   display: grid;
   height: 100%;
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  text-align: left;
   padding-top: 2%;
   padding-bottom: 2%;
+  /* justify-content: space-around; */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .left-column {
-  grid-row: 1 / 12;
-  grid-column: 2 / 7;
+  grid-row: 1 / 13;
+  grid-column: 1 / 7;
   padding-left: 2%;
   padding-right: 2%;
 }
 
 .right-column {
-  grid-row: 1 / 12;
-  grid-column: 7 / 12;
+  grid-row: 1 / 13;
+  grid-column: 7 / 13;
   padding-left: 2%;
   padding-right: 2%;
 }
 
+h1 {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.left-column p {
+  color: white;
+}
+
+.right-column p {
+  color: white;
+}
+
 #divider {
-  grid-row: 1/12;
-  grid-column: 6 / 8;
-  border: #fff 1px solid;
+  grid-row: 1/13;
+  grid-column: 7;
+  border-left: #fff 1px solid;
+  width: 1px;
 }
 
 /* Navigation bar */
 
-.nav-bar {
-  grid-row: 2 / 2;
-  grid-column: 1 / 1;
-  padding-right: 5%;
-}
-
-.nav-bar ul li a {
-  display: flex;
-  flex-grow: 1;
-  flex-basis: auto;
-  justify-content: right;
-  margin-bottom: 10%;
-  padding: 10%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.nav-bar ul li a:hover {
-  background-color: rgba(82, 82, 82, 0.7);
-}
-
-.nav-bar ul li a:active {
-  background-color: rgba(82, 82, 82, 0.3);
-}
-
 @media screen and (max-width: 768px) {
-  .nav-bar {
-    grid-row: 1;
-    grid-column: 2/12;
-    padding-right: 0%;
-  }
-
-  .nav-bar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .nav-bar ul li {
-    width: 30%;
-    height: 20%;
-    padding-top: 3%;
-  }
-
-  .nav-bar ul li a {
-    justify-content: center;
-  }
-
   .left-column {
     grid-row: auto;
     grid-column: 2 / 12;
@@ -172,7 +67,7 @@ footer {
   }
 
   main {
-    grid-column: 1/13;
-    margin: 2%;
+    grid-column: 2/12;
+    margin: 0;
   }
 }

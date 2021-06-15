@@ -11,13 +11,20 @@ html {
   box-sizing: inherit;
 }
 
-/* body {
-  height: 100vh;
-  margin: 0px;
-  padding: 0px;
-  background-color: black;
-  font-family: Arial, Helvetica, sans-serif; 
-}*/
+.home-routed {
+  grid-row: 1/13;
+  grid-column: 1/13;
+}
+
+.cv-routed {
+  grid-row: 1/13;
+  grid-column: 1/13;
+}
+
+.contact-routed {
+  grid-row: 1/13;
+  grid-column: 1/13;
+}
 
 html,
 body,
