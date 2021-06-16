@@ -26,6 +26,10 @@ html {
   grid-column: 1/13;
 }
 
+a.active {
+  background-color: rgba(82, 82, 82, 0.7) !important;
+}
+
 html,
 body,
 div,

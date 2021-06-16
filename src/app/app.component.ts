@@ -6,10 +6,27 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  isTruthy: boolean = false;
+
+  @ViewChild('mainContentElement') mainContentElement: ElementRef | undefined;
+  @ViewChild('navBarElement') navBarElement: ElementRef | undefined;
+
+  @HostListener('document:click', ['$event'])
+  clickOutside(event: any) {
+    if (this.mainContentElement?.nativeElement.contains(event.target)) {
+      console.log('clicked inside');
+    } else if (this.navBarElement?.nativeElement.contains(event.target)) {
+      console.log('clicked inside');
+    } else {
+      this.isTruthy = false;
+      console.log('clicked outside');
+    }
+  }
+
   title = 'HauhiaNet';
 
   //Tests the ngIf in app-component template
-  isTruthy: boolean = false;
+
   viewSection() {
     this.isTruthy = true;
     console.log(this.isTruthy);

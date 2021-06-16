@@ -10,7 +10,7 @@
 
     <footer></footer>
 
-    <nav class="nav-bar">
+    <nav class="nav-bar" #navBarElement>
       <ul id="nav-bar-ul">
         <li>
           <a
@@ -42,6 +42,8 @@
       </ul>
     </nav>
     <!-- Refers to viewSection -method in ts-file -->
-    <main *ngIf="isTruthy"><router-outlet></router-outlet></main>
+    <main *ngIf="isTruthy" #mainContentElement>
+      <router-outlet></router-outlet>
+    </main>
   </div>
 </body>
