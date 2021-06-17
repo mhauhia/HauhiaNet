@@ -282,6 +282,7 @@ footer {
   text-decoration: none;
   transition: 0.4s;
   font-size: 1.8rem;
+  padding-left: 2rem;
 }
 
 .nav-bar ul li a:hover {
