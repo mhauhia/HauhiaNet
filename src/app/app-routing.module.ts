@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { CVComponent } from './cv/cv.component';
 import { HomeComponent } from './home/home.component';
+import { PhotographyComponent } from './photography/photography.component';
 
 // Määritellään linkit sivuille
 // Path = hauhia.net/path
@@ -18,6 +19,11 @@ const routes: Routes = [
   },
 
   {
+    path: 'photography',
+    component: PhotographyComponent,
+  },
+
+  {
     path: 'contact',
     component: ContactComponent,
   },
@@ -28,4 +34,9 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponents = [CVComponent, HomeComponent, ContactComponent];
+export const routingComponents = [
+  CVComponent,
+  HomeComponent,
+  PhotographyComponent,
+  ContactComponent,
+];

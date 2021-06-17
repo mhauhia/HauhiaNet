@@ -10,6 +10,15 @@
     <div *ngIf="elementCV && !isTruthy" class="background-image-2"></div>
     <div *ngIf="elementCV && isTruthy" class="background-image-blur-2"></div>
 
+    <div
+      *ngIf="elementPhotography && !isTruthy"
+      class="background-image-4"
+    ></div>
+    <div
+      *ngIf="elementPhotography && isTruthy"
+      class="background-image-blur-4"
+    ></div>
+
     <div *ngIf="elementContact && !isTruthy" class="background-image-3"></div>
     <div
       *ngIf="elementContact && isTruthy"
@@ -42,6 +51,15 @@
             routerLinkActive="active"
             (click)="changeCVBackground()"
             >CV</a
+          >
+        </li>
+        <li>
+          <a
+            id="photography"
+            routerLink="/photography"
+            routerLinkActive="active"
+            (click)="changePhotographyBackground()"
+            >Photography</a
           >
         </li>
         <li>

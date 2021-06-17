@@ -1,4 +1,13 @@
 /* Beginning of content styles */
+#topRight {
+  padding-top: 4rem;
+}
+
+.hyperLink {
+  text-decoration-line: underline;
+  text-decoration-color: none;
+  color: #fff;
+}
 
 /* Dark box with main content */
 #container {
@@ -15,15 +24,15 @@
 .left-column {
   grid-row: 1 / 13;
   grid-column: 1 / 7;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .right-column {
   grid-row: 1 / 13;
   grid-column: 7 / 13;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .left-column p {

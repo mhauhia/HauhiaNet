@@ -37,10 +37,12 @@ export class AppComponent {
   //Sets default states for booleans to change backgrounds.
   elementHome: boolean = true;
   elementCV: boolean = true;
+  elementPhotography: boolean = true;
   elementContact: boolean = true;
 
   elementHomeBlur: boolean = false;
   elementCVBlur: boolean = false;
+  elementPhotographyBlur: boolean = false;
   elementContactBlur: boolean = false;
 
   //Write a function that sets boolean states to "true" for one of the above booleans and to "false" for remaining two booleans.
@@ -52,6 +54,7 @@ export class AppComponent {
     this.viewSection();
     this.elementHome = true;
     this.elementCV = false;
+    this.elementPhotography = false;
     this.elementContact = false;
     console.log('isTruthy is ' + this.isTruthy);
     console.log('elementHome is ' + this.elementHome);
@@ -63,6 +66,19 @@ export class AppComponent {
     this.viewSection();
     this.elementHome = false;
     this.elementCV = true;
+    this.elementPhotography = false;
+    this.elementContact = false;
+    console.log('isTruthy is ' + this.isTruthy);
+    console.log('elementHome is ' + this.elementHome);
+    console.log('elementCV is ' + this.elementCV);
+    console.log('elementContact is ' + this.elementContact);
+  }
+
+  changePhotographyBackground() {
+    this.viewSection();
+    this.elementHome = false;
+    this.elementCV = false;
+    this.elementPhotography = true;
     this.elementContact = false;
     console.log('isTruthy is ' + this.isTruthy);
     console.log('elementHome is ' + this.elementHome);
@@ -74,6 +90,7 @@ export class AppComponent {
     this.viewSection();
     this.elementHome = false;
     this.elementCV = false;
+    this.elementPhotography = false;
     this.elementContact = true;
     console.log('isTruthy is ' + this.isTruthy);
     console.log('elementHome is ' + this.elementHome);
