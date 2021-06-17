@@ -6,7 +6,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  isTruthy: boolean = false;
+  title = 'HauhiaNet';
 
   @ViewChild('mainContentElement') mainContentElement: ElementRef | undefined;
   @ViewChild('navBarElement') navBarElement: ElementRef | undefined;
@@ -15,28 +15,100 @@ export class AppComponent {
   clickOutside(event: any) {
     if (this.mainContentElement?.nativeElement.contains(event.target)) {
       console.log('clicked inside');
+      console.log('isTruthy is ' + this.isTruthy);
     } else if (this.navBarElement?.nativeElement.contains(event.target)) {
       console.log('clicked inside');
+      console.log('isTruthy is ' + this.isTruthy);
     } else {
       this.isTruthy = false;
       console.log('clicked outside');
+      console.log('isTruthy is ' + this.isTruthy);
     }
   }
+  //isTruthy displays or hides Main-element in template via NgIf. Main-element is hidden until ViewSection() is called.
+  isTruthy: boolean = false;
 
-  title = 'HauhiaNet';
-
-  //Tests the ngIf in app-component template
-
+  //ViewSection method definition.
   viewSection() {
     this.isTruthy = true;
-    console.log(this.isTruthy);
+    console.log('isTruthy is ' + this.isTruthy);
   }
 
-  //Array to background styles
-  backgroundImages = [
-    '.background-image-1',
-    '.background-image-3',
-    '.background-image-4',
-  ];
+  //Sets default states for booleans to change backgrounds.
+  elementHome: boolean = true;
+  elementCV: boolean = true;
+  elementContact: boolean = true;
+
+  elementHomeBlur: boolean = false;
+  elementCVBlur: boolean = false;
+  elementContactBlur: boolean = false;
+
+  //Write a function that sets boolean states to "true" for one of the above booleans and to "false" for remaining two booleans.
+  //"True" means that background will be blurred. Attach function call to "clickOutside" -function to run it?
+
+  //Methods are called in AppComponent template routing section. NgIf sets background according to ElementCV/Home/Contact boolean.
+
+  changeHomeBackground() {
+    this.viewSection();
+    this.elementHome = true;
+    this.elementCV = false;
+    this.elementContact = false;
+    console.log('isTruthy is ' + this.isTruthy);
+    console.log('elementHome is ' + this.elementHome);
+    console.log('elementCV is ' + this.elementCV);
+    console.log('elementContact is ' + this.elementContact);
+  }
+
+  changeCVBackground() {
+    this.viewSection();
+    this.elementHome = false;
+    this.elementCV = true;
+    this.elementContact = false;
+    console.log('isTruthy is ' + this.isTruthy);
+    console.log('elementHome is ' + this.elementHome);
+    console.log('elementCV is ' + this.elementCV);
+    console.log('elementContact is ' + this.elementContact);
+  }
+
+  changeContactBackground() {
+    this.viewSection();
+    this.elementHome = false;
+    this.elementCV = false;
+    this.elementContact = true;
+    console.log('isTruthy is ' + this.isTruthy);
+    console.log('elementHome is ' + this.elementHome);
+    console.log('elementCV is ' + this.elementCV);
+    console.log('elementContact is ' + this.elementContact);
+  }
+
+  //Blur background functions.
+
+  // blurHomeBackground() {
+  //   this.elementHomeBlur = true;
+  //   this.elementCVBlur = false;
+  //   this.elementContactBlur = false;
+  //   this.elementCV = false;
+  //   this.elementHome = false;
+  //   this.elementContact = false;
+  // }
+
+  // blurCVBackground() {
+  //   this.elementHomeBlur = false;
+  //   this.elementCVBlur = true;
+  //   this.elementContactBlur = false;
+  //   this.elementCV = false;
+  //   this.elementHome = false;
+  //   this.elementContact = false;
+  // }
+
+  // blurContactBackground() {
+  //   this.elementHomeBlur = false;
+  //   this.elementCVBlur = false;
+  //   this.elementContactBlur = true;
+  //   this.elementCV = false;
+  //   this.elementHome = false;
+  //   this.elementContact = false;
+  // }
+
   constructor() {}
 }

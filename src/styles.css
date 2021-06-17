@@ -1,34 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-html {
-  box-sizing: border-box;
-  margin: 0%;
-  padding: 0%;
-  background-color: black;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-.home-routed {
-  grid-row: 1/13;
-  grid-column: 1/13;
-}
-
-.cv-routed {
-  grid-row: 1/13;
-  grid-column: 1/13;
-}
-
-.contact-routed {
-  grid-row: 1/13;
-  grid-column: 1/13;
-}
-
-a.active {
-  background-color: rgba(82, 82, 82, 0.7) !important;
-}
+/* Reset */
 
 html,
 body,
@@ -153,4 +123,55 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.home-routed {
+  grid-row: 1/13;
+  grid-column: 1/13;
+}
+
+.cv-routed {
+  grid-row: 1/13;
+  grid-column: 1/13;
+}
+
+.contact-routed {
+  grid-row: 1/13;
+  grid-column: 1/13;
+}
+
+a.active {
+  background-color: rgba(82, 82, 82, 0.7) !important;
+}
+
+/* Universal content styles */
+
+h1 {
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.5rem;
 }
