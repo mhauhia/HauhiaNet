@@ -1,14 +1,34 @@
 <div id="container">
   <div class="left-column">
-    <!-- <h1>Welcome to my website</h1>
-    <p>
-      My name is Markus. I'm 35 years old. You will find on this website
-      information about me and my interests.
-    </p> -->
+    <h1>Contact Form</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label>
+        Name:
+        <input type="text" formControlName="name" placeholder="required" />
+      </label>
+
+      <label>
+        Phone number:
+        <input
+          type="text"
+          formControlName="phoneNumber"
+          placeholder="optional"
+        />
+      </label>
+
+      <label>
+        Email:
+        <input type="text" formControlName="email" placeholder="required" />
+      </label>
+
+      <label>
+        Message:
+        <input type="text" formControlName="message" placeholder="required" />
+      </label>
+      <button id="submit" click="onSubmit()">Submit</button>
+    </form>
   </div>
   <div id="divider"></div>
 
-  <div class="right-column">
-    <!-- <p>My hobbies are disc golf, PC-gaming and photography</p> -->
-  </div>
+  <div class="right-column"></div>
 </div>

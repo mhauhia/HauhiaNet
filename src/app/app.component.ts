@@ -98,34 +98,7 @@ export class AppComponent {
     console.log('elementContact is ' + this.elementContact);
   }
 
-  //Blur background functions.
-
-  // blurHomeBackground() {
-  //   this.elementHomeBlur = true;
-  //   this.elementCVBlur = false;
-  //   this.elementContactBlur = false;
-  //   this.elementCV = false;
-  //   this.elementHome = false;
-  //   this.elementContact = false;
-  // }
-
-  // blurCVBackground() {
-  //   this.elementHomeBlur = false;
-  //   this.elementCVBlur = true;
-  //   this.elementContactBlur = false;
-  //   this.elementCV = false;
-  //   this.elementHome = false;
-  //   this.elementContact = false;
-  // }
-
-  // blurContactBackground() {
-  //   this.elementHomeBlur = false;
-  //   this.elementCVBlur = false;
-  //   this.elementContactBlur = true;
-  //   this.elementCV = false;
-  //   this.elementHome = false;
-  //   this.elementContact = false;
-  // }
-
   constructor() {}
+
+  ngOnInit() {}
 }

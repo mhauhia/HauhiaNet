@@ -30,6 +30,11 @@ h1 {
   color: white;
 }
 
+label {
+  font-size: 1rem;
+  color: white;
+}
+
 .left-column p {
   color: white;
 }
