@@ -1,34 +1,60 @@
 <div id="container">
   <div class="left-column">
-    <h1>Contact Form</h1>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <label>
-        Name:
-        <input type="text" formControlName="name" placeholder="required" />
-      </label>
-
-      <label>
-        Phone number:
+    <h1>Contact me!</h1>
+    <h2>Feel free to contact me regarding any subject.</h2>
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <div class="field">
+        <label class="label">Name</label>
         <input
           type="text"
-          formControlName="phoneNumber"
-          placeholder="optional"
+          name="name"
+          class="input"
+          [(ngModel)]="name"
+          #nameInput="ngModel"
+          required
         />
-      </label>
+        <div class="error" *ngIf="nameInput.invalid && nameInput.touched">
+          Your name is required.
+        </div>
+      </div>
 
-      <label>
-        Email:
-        <input type="text" formControlName="email" placeholder="required" />
-      </label>
+      <div class="field">
+        <label class="label">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="input"
+          [(ngModel)]="email"
+          #emailInput="ngModel"
+          required
+          email
+        />
+        <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
+          A valid email-address is required.
+        </div>
+      </div>
 
-      <label>
-        Message:
-        <input type="text" formControlName="message" placeholder="required" />
-      </label>
-      <button id="submit" click="onSubmit()">Submit</button>
+      <div class="field">
+        <label class="label">Your message</label>
+        <textarea
+          name="message"
+          class="textarea"
+          [(ngModel)]="message"
+          #messageInput="ngModel"
+          required
+        ></textarea>
+        <div class="error" *ngIf="messageInput.invalid && messageInput.touched">
+          Please enter a message.
+        </div>
+      </div>
+
+      <button type="submit" class="button" [disabled]="contactForm.invalid">
+        Send!
+      </button>
     </form>
   </div>
-  <div id="divider"></div>
+
+  <div class="divider"></div>
 
   <div class="right-column"></div>
 </div>

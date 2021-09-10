@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,22 +9,24 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   },
 })
 export class ContactComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
-  contactForm: FormGroup;
+  name: string;
+  email: string;
+  message: string;
+  constructor() {}
 
-  ngOnInit(): void {
-    this.initializeForm();
-  }
+  ngOnInit(): void {}
 
-  initializeForm(): void {
-    this.contactForm = this.fb.group({
-      name: '',
-      phoneNumber: '',
-      email: '',
-      message: '',
-    });
-  }
-  onSubmit(): void {
-    console.log(this.contactForm);
+  submitForm() {
+    const message = `
+    
+    Lähettäjä: ${this.name}
+    Lähettäjän sähkoposti: ${this.email}
+    
+    ${this.message}
+
+    `;
+
+    alert('Your message has been sent!');
+    console.log(message);
   }
 }
