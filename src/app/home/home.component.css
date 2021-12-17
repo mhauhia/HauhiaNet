@@ -53,6 +53,11 @@
   width: 1px;
 }
 
+#profile {
+  width: 100px;
+  height: auto;
+}
+
 /* Navigation bar */
 
 @media screen and (max-width: 768px) {
