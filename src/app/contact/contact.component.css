@@ -30,9 +30,23 @@ h1 {
   color: white;
 }
 
+h2 {
+  padding-bottom: 2rem;
+}
+
 label {
-  font-size: 1rem;
+  font-size: 1.7rem;
   color: white;
+}
+
+form {
+  padding-left: 3%;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.field {
+  padding-bottom: 2rem;
 }
 
 .left-column p {
@@ -41,6 +55,11 @@ label {
 
 .right-column p {
   color: white;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
 }
 
 #divider {
