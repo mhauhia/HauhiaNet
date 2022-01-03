@@ -87,6 +87,12 @@ export class AppComponent {
     console.log('elementHome is ' + this.elementHome);
     console.log('elementCV is ' + this.elementCV);
     console.log('elementContact is ' + this.elementContact);
+
+    // show the photography container hidden by photography component
+
+    let showhide = document.getElementById('container');
+
+    showhide!.style.display = 'grid';
   }
 
   changeContactBackground() {

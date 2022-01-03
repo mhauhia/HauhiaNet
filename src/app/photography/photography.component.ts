@@ -13,8 +13,11 @@ export class PhotographyComponent implements OnInit {
   showGallery: boolean = false;
   viewGallery() {
     this.showGallery = true;
+
     let showhide = document.getElementById('container');
+
     console.log('Showhide is' + showhide);
+
     showhide!.style.display = 'none';
 
     console.log('Show gallery is ' + this.showGallery);

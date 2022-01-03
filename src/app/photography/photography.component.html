@@ -1,5 +1,5 @@
 <div id="container">
-  <p>TÄMÄ ON PÄÄKOMPONENTTI</p>
+  <!-- Call the viewGallery function to set showGallery boolean to true and to hide the phohography-container -->
   <div class="gallery-container w-2 h-2">
     <a routerLink="gallery1" routerLinkActive="active" (click)="viewGallery()">
       <div class="gallery-item">
@@ -60,8 +60,8 @@
       </div>
     </a>
   </div>
-  <!-- Do not remove content -->
-  <!-- <div class="gallery-container w-2 h-2">
+
+  <div class="gallery-container w-2 h-2">
     <a routerLink="gallery6" routerLinkActive="active" (click)="viewGallery()">
       <div class="gallery-item">
         <div class="image">
@@ -70,7 +70,7 @@
         <div class="text">Abandoned</div>
       </div>
     </a>
-  </div> -->
+  </div>
 </div>
 
 <!-- Router outlet for child component (gallery) -->
