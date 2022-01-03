@@ -52,6 +52,7 @@ export class AppComponent {
 
   changeHomeBackground() {
     this.viewSection();
+    console.log('changeHomeBackground()');
     this.elementHome = true;
     this.elementCV = false;
     this.elementPhotography = false;
@@ -64,6 +65,7 @@ export class AppComponent {
 
   changeCVBackground() {
     this.viewSection();
+    console.log('viewCVBackground()');
     this.elementHome = false;
     this.elementCV = true;
     this.elementPhotography = false;
@@ -76,6 +78,7 @@ export class AppComponent {
 
   changePhotographyBackground() {
     this.viewSection();
+    console.log('changePhotographyBackground()');
     this.elementHome = false;
     this.elementCV = false;
     this.elementPhotography = true;
@@ -88,6 +91,7 @@ export class AppComponent {
 
   changeContactBackground() {
     this.viewSection();
+    console.log('changeContactBackground()');
     this.elementHome = false;
     this.elementCV = false;
     this.elementPhotography = false;

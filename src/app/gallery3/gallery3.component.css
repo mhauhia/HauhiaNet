@@ -34,13 +34,13 @@ p {
   overflow: hidden;
 }
 
-.w-1 {
+/* .w-1 {
   grid-column: span 1;
 }
 
 .w-2 {
   grid-column: span 2;
-}
+} */
 
 .w-3 {
   grid-column: span 3;

@@ -1,61 +1,80 @@
 <div id="container">
+  <p>TÄMÄ ON PÄÄKOMPONENTTI</p>
   <div class="gallery-container w-2 h-2">
-    <div class="gallery-item">
-      <div class="image">
-        <img src="assets/photos/nature/paavolan_tammi.jpg" alt="Nature" />
+    <a routerLink="gallery1" routerLinkActive="active" (click)="viewGallery()">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="assets/photos/nature/paavolan_tammi.jpg" alt="Nature" />
+        </div>
+        <div class="text">Nature</div>
       </div>
-      <div class="text">Nature</div>
-    </div>
+    </a>
   </div>
 
   <div class="gallery-container w-2 h-2">
-    <div class="gallery-item">
-      <div class="image">
-        <img
-          src="assets/photos/real-estate/harjunsalontie_1.jpg"
-          alt="Real estate"
-        />
+    <a routerLink="gallery2" routerLinkActive="active" (click)="viewGallery()">
+      <div class="gallery-item">
+        <div class="image">
+          <img
+            src="assets/photos/real-estate/harjunsalontie_1.jpg"
+            alt="Real estate"
+          />
+        </div>
+        <div class="text">Real estate</div>
       </div>
-      <div class="text">Real estate</div>
-    </div>
+    </a>
   </div>
 
   <div class="gallery-container w-2 h-2">
-    <div class="gallery-item">
-      <div class="image">
-        <img
-          src="assets/photos/cityscapes/foggy_evening_1.jpg"
-          alt="Cityscapes"
-        />
+    <a routerLink="gallery3" routerLinkActive="active" (click)="viewGallery()">
+      <div class="gallery-item">
+        <div class="image">
+          <img
+            src="assets/photos/cityscapes/foggy_evening_1.jpg"
+            alt="Cityscapes"
+          />
+        </div>
+        <div class="text">Cityscapes</div>
       </div>
-      <div class="text">Cityscapes</div>
-    </div>
+    </a>
   </div>
 
   <div class="gallery-container w-2 h-2">
-    <div class="gallery-item">
-      <div class="image">
-        <img src="assets/photos/animals/varpuspollo.jpg" alt="Varpuspöllö" />
+    <a routerLink="gallery4" routerLinkActive="active" (click)="viewGallery()">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="assets/photos/animals/varpuspollo.jpg" alt="Varpuspöllö" />
+        </div>
+        <div class="text">Animals</div>
       </div>
-      <div class="text">Animals</div>
-    </div>
+    </a>
   </div>
 
   <div class="gallery-container w-2 h-2">
-    <div class="gallery-item">
-      <div class="image">
-        <img src="assets/photos/military/f-35_1.jpg" alt="F-35" />
+    <a routerLink="gallery5" routerLinkActive="active" (click)="viewGallery()">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="assets/photos/military/f-35_1.jpg" alt="F-35" />
+        </div>
+        <div class="text">Military</div>
       </div>
-      <div class="text">Military</div>
-    </div>
+    </a>
   </div>
+  <!-- Do not remove content -->
+  <!-- <div class="gallery-container w-2 h-2">
+    <a routerLink="gallery6" routerLinkActive="active" (click)="viewGallery()">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="assets/photos/abandoned/inkoo_ship.jpg" alt="Abandoned" />
+        </div>
+        <div class="text">Abandoned</div>
+      </div>
+    </a>
+  </div> -->
+</div>
 
-  <div class="gallery-container w-2 h-2">
-    <div class="gallery-item">
-      <div class="image">
-        <img src="assets/photos/abandoned/inkoo_ship.jpg" alt="Abandoned" />
-      </div>
-      <div class="text">Abandoned</div>
-    </div>
-  </div>
+<!-- Router outlet for child component (gallery) -->
+<!-- refers to showGallery -boolean in photography.component.ts -->
+<div *ngIf="showGallery">
+  <router-outlet></router-outlet>
 </div>
